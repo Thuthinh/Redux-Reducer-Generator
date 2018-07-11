@@ -1,4 +1,5 @@
 import { actionGenerators } from '../util/generator.js';
+
 const getData = (state, action) => {
     return {...state, data: state.data.concat(action.payload)};
 };
@@ -20,11 +21,11 @@ const removeByIndex = (state, action) => {
 }
 
 const actions = [
-    {type: 'GET_DATA', exec: getData},
-    {type: 'REMOVE_LAST', exec: removeLast},
-    {type: 'REMOVE_FIRST', exec: removeFirst},
-    {type: 'REMOVE_ALL', exec: removeAll},
-    {type: 'REMOVE_BY_INDEX', exec: removeByIndex}
+    {type: 'GET_DATA', reducer: getData},
+    {type: 'REMOVE_LAST', reducer: removeLast},
+    {type: 'REMOVE_FIRST', reducer: removeFirst},
+    {type: 'REMOVE_ALL', reducer: removeAll},
+    {type: 'REMOVE_BY_INDEX', reducer: removeByIndex}
 ];
 
 const initialState = {

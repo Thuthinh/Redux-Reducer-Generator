@@ -2,14 +2,14 @@ export const actionGenerators = (actions) => {
     return actions.reduce((a,c)=>{
         const id = Symbol(c.type);   
         a.actions = {...a.actions, [c.type]: id};
-        a.creator = a.creator ? a.creator.concat({id, exec: c.exec}) : [{id, exec: c.exec}];
+        a.reducer = a.reducer ? a.reducer.concat({id, reducer: c.reducer}) : [{id, reducer: c.reducer}];
         return a;
     },{});
 }
 
-export const reducerGenerators = (initialState, creator) => {
+export const reducerGenerators = (initialState, reducer) => {
     return (state = initialState, action) => {
-        const found = creator.find(x=>x.id === action.type);
-        return found ? found.exec(state, action) : state;
+        const found = reducer.find(x=>x.id === action.type);
+        return found ? found.reducer(state, action) : state;
     }
 }
