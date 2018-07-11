@@ -5,3 +5,5 @@ This project aim to create a generic Reducer Generator that will work for all re
 git clone git@github.com:Thuthinh/Redux-Reducer-Generator.git
 npm install
 ```
+# Authors
+Jonny Nguyen
