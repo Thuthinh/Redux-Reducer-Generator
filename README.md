@@ -6,4 +6,3 @@ git clone git@github.com:Thuthinh/Redux-Reducer-Generator.git
 npm install
 ```
 Project utilize ES6 import so you need an evergreen browser.
-# 
