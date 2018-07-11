@@ -6,4 +6,4 @@ git clone git@github.com:Thuthinh/Redux-Reducer-Generator.git
 npm install
 ```
 # Authors
-Jonny Nguyen
+* **Jonny Nguyen**
